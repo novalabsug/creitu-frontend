@@ -7,7 +7,7 @@ const SignIn = () => {
     <main>
       <div className="py-12">
         <div className="flex">
-          <div className="m-auto w-3/5">
+          <div className="m-auto lg:w-3/5 w-full">
             <div className="py-8 px-12">
               <h3 className="text-center text-2xl font-bold text-slate-600">
                 Login to Creitu
