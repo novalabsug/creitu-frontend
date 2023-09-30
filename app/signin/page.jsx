@@ -5,10 +5,10 @@ import { RiGoogleLine } from "react-icons/ri";
 const SignIn = () => {
   return (
     <main>
-      <div className="py-12">
+      <div className="lg:py-12 py-16">
         <div className="flex">
           <div className="m-auto lg:w-3/5 w-full">
-            <div className="py-8 px-12">
+            <div className="py-8 lg:px-12 px-4">
               <h3 className="text-center text-2xl font-bold text-slate-600">
                 Login to Creitu
               </h3>
@@ -31,7 +31,7 @@ const SignIn = () => {
       </div>
 
       {/* //spacer */}
-      <div className="py-8"></div>
+      <div className="lg:py-8 py-28"></div>
     </main>
   );
 };
