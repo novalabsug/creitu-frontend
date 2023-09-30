@@ -19,6 +19,7 @@ export const connectToDB = async () => {
         ? process.env.DATABASE_DEV_URL
         : process.env.DATABASE_PROD_URL,
       {
+        dbName: "creitu-app",
         useNewUrlParser: true,
         useUnifiedTopology: true,
       }
