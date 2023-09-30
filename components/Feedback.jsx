@@ -14,8 +14,6 @@ const Feedback = () => {
   const [commentError, setCommentError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  console.log({ emailError });
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 

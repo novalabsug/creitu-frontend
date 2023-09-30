@@ -1,5 +1,6 @@
 import { GithubIcon } from "lucide-react";
 import React from "react";
+import { RiGoogleLine } from "react-icons/ri";
 
 const SignIn = () => {
   return (
@@ -19,7 +20,7 @@ const SignIn = () => {
                   <p className="text-lg mx-2">Continue with Github</p>
                 </div>
                 <div className="py-2 px-6 border-[1.8px] border-slate-300 rounded-md flex my-2 cursor-pointer justify-center w-fit">
-                  <GithubIcon />
+                  <RiGoogleLine size={25} />
 
                   <p className="text-lg mx-2">Continue with Google</p>
                 </div>

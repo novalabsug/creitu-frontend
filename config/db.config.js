@@ -11,13 +11,14 @@ export const connectToDB = async () => {
     return;
   }
 
+  console.log(process.env.NODE_ENV);
+
   try {
     await mongoose.connect(
       process.env.NODE_ENV == "development"
         ? process.env.DATABASE_DEV_URL
         : process.env.DATABASE_PROD_URL,
       {
-        dbName: "creitu-app",
         useNewUrlParser: true,
         useUnifiedTopology: true,
       }
