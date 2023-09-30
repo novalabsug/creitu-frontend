@@ -14,7 +14,7 @@ export default function Home() {
       <div className="py-8">
         <div className="flex">
           <div className="m-auto lg:w-4/5 w-[95%]">
-            <p className="text-center text-lg font-light">
+            <p className="text-center text-lg ">
               Your portfolio is your{" "}
               <span className="primary-color font-bold">
                 professional digital footprint
@@ -60,7 +60,7 @@ export default function Home() {
                 Build your portfolio in minutes
               </h3>
 
-              <p className="text-center text-base text-slate-700 my-4 font-thin">
+              <p className="text-center text-base text-slate-700 my-4">
                 Use our pre-built simple and modern templates and create your
                 portfolio with ease
               </p>
@@ -75,7 +75,7 @@ export default function Home() {
                 Collaborate on project
               </h3>
 
-              <p className="text-center text-base text-slate-700 my-4 font-thin">
+              <p className="text-center text-base text-slate-700 my-4">
                 Connect and collaborate with fellow creatives on projects that
                 interest you
               </p>
@@ -90,7 +90,7 @@ export default function Home() {
                 Find the right creative for your project
               </h3>
 
-              <p className="text-center text-base text-slate-700 my-4 font-thin">
+              <p className="text-center text-base text-slate-700 my-4">
                 Explore the many projects listed and find yourself the perfect
                 creative for your project
               </p>
