@@ -14,12 +14,12 @@ const SignIn = () => {
               </h3>
 
               <div className="py-8 px-12 flex justify-center items-center flex-col">
-                <div className="py-2 px-6 border-[1.8px] border-slate-300 rounded-md flex my-2 cursor-pointer justify-center w-fit">
+                <div className="lg:py-2 py-3 px-6 border-[1.8px] border-slate-300 rounded-md flex my-2 cursor-pointer justify-center w-fit">
                   <GithubIcon />
 
                   <p className="text-lg mx-2">Continue with Github</p>
                 </div>
-                <div className="py-2 px-6 border-[1.8px] border-slate-300 rounded-md flex my-2 cursor-pointer justify-center w-fit">
+                <div className="lg:py-2 py-3 px-6 border-[1.8px] border-slate-300 rounded-md flex my-2 cursor-pointer justify-center w-fit">
                   <RiGoogleLine size={25} />
 
                   <p className="text-lg mx-2">Continue with Google</p>
@@ -31,7 +31,7 @@ const SignIn = () => {
       </div>
 
       {/* //spacer */}
-      <div className="lg:py-8 py-28"></div>
+      <div className="lg:py-8 py-24"></div>
     </main>
   );
 };
