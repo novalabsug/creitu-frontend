@@ -16,7 +16,7 @@ const Hero = () => {
           </div>
 
           <div className="py-2">
-            <p className="lg:text-6xl sm:text-5xl text-4xl font-thin text-center">
+            <p className="lg:text-6xl sm:text-5xl text-4xl text-center">
               Showcase your creative works to the rest of the world
             </p>
           </div>
