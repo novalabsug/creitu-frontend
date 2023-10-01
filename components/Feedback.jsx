@@ -9,8 +9,13 @@ import toast from "react-hot-toast";
 import { LucideLoader2 } from "lucide-react";
 
 const Feedback = () => {
-  const [formData, setFormData] = useState({ email: "", comment: "" });
+  const [formData, setFormData] = useState({
+    email: "",
+    comment: "",
+    profession: "",
+  });
   const [emailError, setEmailError] = useState(false);
+  const [professionError, setProfessionError] = useState(false);
   const [commentError, setCommentError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -34,9 +39,12 @@ const Feedback = () => {
       )
         setEmailError((prev) => (prev ? false : true));
 
+      if (error.response.data == "Please enter your profession")
+        setEmailError((prev) => (prev ? false : true));
+
       toast.error(error.response.data || "Error occured");
     } finally {
-      setFormData({ email: "", comment: "" });
+      setFormData({ email: "", comment: "", profession: "" });
       setIsLoading(false);
     }
   };
@@ -49,9 +57,25 @@ const Feedback = () => {
       >
         <div className="py-2">
           <Input
-            placeholder="example@email.com"
+            placeholder="example@email.com*"
             name="email"
-            className={`${emailError && "border-red-600 border-[1.8px]"}`}
+            className={`${
+              emailError && "border-red-600 border-[1.8px]"
+            } text-base`}
+            onChange={(e) =>
+              setFormData({ ...formData, [e.target.name]: e.target.value })
+            }
+            value={formData.email}
+          />
+        </div>
+
+        <div className="py-2">
+          <Input
+            placeholder="your profession*"
+            name="profession"
+            className={`${
+              professionError && "border-red-600 border-[1.8px]"
+            } text-base`}
             onChange={(e) =>
               setFormData({ ...formData, [e.target.name]: e.target.value })
             }
@@ -62,7 +86,7 @@ const Feedback = () => {
         <div className="py-2">
           <Textarea
             placeholder="Your thoughts. Optional"
-            className={`${commentError && "border-red-600"}`}
+            className={`${commentError && "border-red-600"} text-base`}
             name="comment"
             onChange={(e) =>
               setFormData({ ...formData, [e.target.name]: e.target.value })

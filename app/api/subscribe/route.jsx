@@ -10,15 +10,18 @@ export const POST = async (req) => {
 
     const resend = new Resend(process.env.RESEND_API_KEY);
 
-    const { email, comment } = await req.json();
+    const { email, comment, profession } = await req.json();
 
     if (!email || email == "")
       return new NextResponse("Please enter your email", { status: 400 });
 
+    if (!profession || profession == "")
+      return new NextResponse("Please enter your profession", { status: 400 });
+
     if (!validator.isEmail(email))
       return new NextResponse("Please enter a valid email", { status: 400 });
 
-    const newSubscription = new Subscribe({ email, comment });
+    const newSubscription = new Subscribe({ email, comment, profession });
 
     await newSubscription.save();
 
@@ -35,7 +38,10 @@ export const POST = async (req) => {
     });
 
     return new NextResponse(
-      JSON.stringify({ user: { email, comment }, response: "Success" }),
+      JSON.stringify({
+        user: { email, comment, profession },
+        response: "Success",
+      }),
       { status: 200 }
     );
   } catch (error) {
