@@ -44,7 +44,7 @@ const Feedback = () => {
   return (
     <>
       <form
-        className="border-[1.8px] rounded-md border-[#0c7199] px-4 py-6"
+        className="border-[1.8px] rounded-md border-slate-300 p-6"
         onSubmit={handleSubmit}
       >
         <div className="py-2">

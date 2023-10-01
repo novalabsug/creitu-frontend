@@ -45,10 +45,10 @@ export default function Home() {
 
       {/* //section --------------------- */}
       <div className="flex py-16">
-        <div className="m-auto w-4/5">
+        <div className="m-auto lg:w-4/5 w-[90%]">
           <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
-            <div className="pt-8 pb-4 border-[#0c7199] border-[1.8px] rounded-md px-4">
-              <h2 className={`font-bold text-center text-lg primary-color`}>
+            <div className="pt-8 pb-4 border-slate-300 border-[1.8px] rounded-md px-4">
+              <h2 className={`font-bold text-center text-base primary-color`}>
                 Build
               </h2>
 
@@ -62,8 +62,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="pt-8 pb-4 border-[#0c7199] border-[1.8px] rounded-md px-4">
-              <h2 className={`font-bold text-center text-lg primary-color`}>
+            <div className="pt-8 pb-4 border-slate-300 border-[1.8px] rounded-md px-4">
+              <h2 className={`font-bold text-center text-base primary-color`}>
                 collaborate
               </h2>
 
@@ -77,8 +77,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="pt-8 pb-4 border-[#0c7199] border-[1.8px] rounded-md px-4">
-              <h2 className={`font-bold text-center text-lg primary-color`}>
+            <div className="pt-8 pb-4 border-slate-300 border-[1.8px] rounded-md px-4">
+              <h2 className={`font-bold text-center text-base primary-color`}>
                 explore
               </h2>
 

@@ -8,9 +8,7 @@ const Header = () => {
       <div className="flex justify-between">
         <div className="p-2">
           <Link href={"/"}>
-            <h2 className="text-2xl font-black uppercase">
-              cr<span className="text-[#0c7199]">ei</span>tu
-            </h2>
+            <h2 className="text-2xl font-black uppercase">creitu</h2>
           </Link>
         </div>
 
