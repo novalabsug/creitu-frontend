@@ -14,7 +14,7 @@ export default function Home() {
       <div className="py-8">
         <div className="flex">
           <div className="m-auto lg:w-4/5 w-[95%]">
-            <p className="text-center text-lg ">
+            <p className="text-center text-lg lg:font-normal font-light">
               Your portfolio is your{" "}
               <span className="primary-color font-bold">
                 professional digital footprint
@@ -45,13 +45,9 @@ export default function Home() {
 
       {/* //section --------------------- */}
       <div className="flex py-16">
-        <div className="absolute top-0 bottom-0 right-0 left-0 hidden">
-          <div className="absolute gradient__bgs top-[55%] left-[20%]"></div>
-        </div>
-
         <div className="m-auto w-4/5">
           <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
-            <div className="pt-8 pb-4 border-[1.8px] border-slate-300 rounded-md px-4">
+            <div className="pt-8 pb-4 border-[#0c7199] border-[1.8px] rounded-md px-4">
               <h2 className={`font-bold text-center text-lg primary-color`}>
                 Build
               </h2>
@@ -66,7 +62,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="pt-8 pb-4 border-[1.8px] border-slate-300 rounded-md px-4">
+            <div className="pt-8 pb-4 border-[#0c7199] border-[1.8px] rounded-md px-4">
               <h2 className={`font-bold text-center text-lg primary-color`}>
                 collaborate
               </h2>
@@ -81,7 +77,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="pt-8 pb-4 border-[1.8px] border-slate-300 rounded-md px-4">
+            <div className="pt-8 pb-4 border-[#0c7199] border-[1.8px] rounded-md px-4">
               <h2 className={`font-bold text-center text-lg primary-color`}>
                 explore
               </h2>
