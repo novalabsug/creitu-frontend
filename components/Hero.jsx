@@ -19,7 +19,7 @@ const Hero = () => {
             </div>
 
             <div className="py-2">
-              <p className="lg:text-6xl sm:text-5xl text-4xl font-bold text-center">
+              <p className="lg:text-6xl text-5xl font-bold text-center">
                 Showcase your{" "}
                 <span className="text-[#05465f]">creative works</span> to the
                 rest of <span className="text-[#05465f]">the world</span>
