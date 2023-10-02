@@ -165,7 +165,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="py-4 flex">
+            <div className="py-6 flex">
               <div className="m-auto lg:w-4/5 w-[90%]">
                 <Feedback />
               </div>

@@ -49,6 +49,7 @@ const Hero = () => {
                 <p className="lg:text-6xl sm:text-5xl text-4xl font-bold text-center flex">
                   to the rest of
                 </p>
+
                 <p className="ml-4 lg:text-6xl sm:text-5xl text-4xl font-bold text-center text-[#05465f]">
                   the world
                 </p>

@@ -4,6 +4,7 @@ const subscribeSchema = new Schema(
   {
     email: String,
     comment: String,
+    profession: String,
   },
   {
     timestamps: true,

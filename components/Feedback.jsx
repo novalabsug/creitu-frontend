@@ -79,7 +79,7 @@ const Feedback = () => {
             onChange={(e) =>
               setFormData({ ...formData, [e.target.name]: e.target.value })
             }
-            value={formData.email}
+            value={formData.profession}
           />
         </div>
 
@@ -95,8 +95,8 @@ const Feedback = () => {
           />
         </div>
 
-        <div>
-          <Button className="bg-primary" type={"submit"}>
+        <div className="py-2">
+          <Button className="bg-primary text-base" type={"submit"}>
             {isLoading && <LucideLoader2 size={25} />}
             Submit
           </Button>
