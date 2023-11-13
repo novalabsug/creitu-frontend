@@ -23,7 +23,7 @@
   filter: blur(calc(var(--size) / 5));
   background-image: linear-gradient(
     #0c7199,
-    #d4d4d4,
+    #f1f1f1,
     #c1e4f1,
     #ffffff,
     #05465f
@@ -33,6 +33,6 @@
 }
 
 .bg__gradient-2 {
-  background: #f3f3f3;
-  background: linear-gradient(90deg, #e8f2f7 0, #f1f1f1 58%);
+  background: #f8f8f8;
+  background: linear-gradient(72deg, #f9feff 0, #fcfbfb 58%);
 }
