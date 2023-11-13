@@ -1,5 +1,8 @@
 import Feedback from "@/components/Feedback";
 import Hero from "@/components/Hero";
+import UiCard1 from "@/components/UiCard1";
+import Svg1 from "@/constants/Svg1";
+import { landingContent1 } from "@/constants/constant";
 import { ChevronRight, Dot } from "lucide-react";
 
 import Image from "next/image";
@@ -12,10 +15,10 @@ export default function Home() {
       {/* //---------- main content ------------------ */}
 
       {/* //section --------------------- */}
-      <div className="py-8">
+      {/* <div className="py-8">
         <div className="flex">
           <div className="m-auto lg:w-4/5 w-[95%]">
-            <p className="text-center text-lg lg:font-normal font-light">
+            <p className="text-center text-lg lg:font-normal font-light text-white">
               Your portfolio is your{" "}
               <span className="primary-color font-bold">
                 professional digital footprint
@@ -33,16 +36,16 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* //section --------------------- */}
-      <div className="py-4">
+      <div className="py-8">
         <div className="flex">
           <div className="m-auto lg:w-4/5 w-3/5">
-            <div className="bg-slate-300 h-[0.1rem] lg:hidden block"></div>
+            <div className="bg-slate-300 h-[0.1rem] hidden"></div>
 
             <div className="lg:flex justify-center hidden">
-              <p className="text-2xl font-bold text-slate-300 hover:text-slate-800 transition-all mx-4">
+              <p className="text-3xl font-semibold text-slate-300 hover:text-slate-400 transition-all mx-4">
                 Sign Up
               </p>
 
@@ -53,7 +56,7 @@ export default function Home() {
                 <ChevronRight size={20} className="primary-color" />
               </div>
 
-              <p className="text-2xl font-bold text-slate-300 hover:text-slate-800 transition-all mx-4">
+              <p className="text-3xl font-semibold text-slate-300 hover:text-slate-400 transition-all mx-4">
                 Choose a template
               </p>
 
@@ -64,7 +67,7 @@ export default function Home() {
                 <ChevronRight size={20} className="primary-color" />
               </div>
 
-              <p className="text-2xl font-bold text-slate-300 hover:text-slate-800 transition-all mx-4">
+              <p className="text-3xl font-semibold text-slate-300 hover:text-slate-400 transition-all mx-4">
                 Add Content
               </p>
 
@@ -75,7 +78,7 @@ export default function Home() {
                 <ChevronRight size={20} className="primary-color" />
               </div>
 
-              <p className="text-2xl font-bold text-slate-300 hover:text-slate-800 transition-all mx-4">
+              <p className="text-3xl font-semibold text-slate-300 hover:text-slate-400 transition-all mx-4">
                 Publish
               </p>
             </div>
@@ -86,62 +89,24 @@ export default function Home() {
       {/* //section --------------------- */}
       <div className="flex py-16">
         <div className="m-auto lg:w-4/5 w-[90%]">
-          <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
-            <div className="pt-8 pb-4 border-slate-300 border-[1.8px] rounded-md px-4 h-[250px]">
-              <div className="h-[90px]">
-                <h2 className={`font-bold text-center text-base primary-color`}>
-                  Build
-                </h2>
-
-                <h3 className="text-center font-bold text-2xl text-slate-700">
-                  Build your portfolio in minutes
-                </h3>
-              </div>
-
-              <div className="py-1">
-                <p className="text-center text-base text-slate-700 my-4">
-                  Use our pre-built simple and modern templates and create your
-                  portfolio with ease
-                </p>
+          <div className="flex py-8">
+            <div className="w-2/4">
+              <div className="relative py-12">
+                <video loop autoplay muted height={400} width={"100%"}>
+                  <source src="/videos/bg.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
 
-            <div className="pt-8 pb-4 border-slate-300 border-[1.8px] rounded-md px-4">
-              <div className="h-[90px]">
-                <h2 className={`font-bold text-center text-base primary-color`}>
-                  collaborate
-                </h2>
-
-                <h3 className="text-center font-bold text-2xl text-slate-700">
-                  Collaborate on project
-                </h3>
-              </div>
-
-              <div className="py-1">
-                <p className="text-center text-base text-slate-700 my-4">
-                  Connect and collaborate with fellow creatives on projects that
-                  interest you
-                </p>
-              </div>
-            </div>
-
-            <div className="pt-8 pb-4 border-slate-300 border-[1.8px] rounded-md px-4">
-              <div className="h-[90px]">
-                <h2 className={`font-bold text-center text-base primary-color`}>
-                  explore
-                </h2>
-
-                <h3 className="text-center font-bold text-2xl text-slate-700">
-                  Find the right creative for your project
-                </h3>
-              </div>
-
-              <div className="py-1">
-                <p className="text-center text-base text-slate-700 my-4">
-                  Explore the many projects listed and find yourself the perfect
-                  creative for your project
-                </p>
-              </div>
+            <div className="w-2/4">
+              {landingContent1.map((content, index) => (
+                <UiCard1
+                  title={content.title}
+                  subTitle={content.subTitle}
+                  content={content.content}
+                  key={index}
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -156,7 +121,7 @@ export default function Home() {
                 excited about creitu?
               </h2>
 
-              <h3 className="text-center font-bold text-2xl text-slate-700">
+              <h3 className="text-center font-bold text-2xl text-slate-200">
                 Leave us your email and we shall notify you when we launch
               </h3>
 
