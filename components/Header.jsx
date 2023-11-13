@@ -4,11 +4,11 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <nav className="py-4 lg:px-8 px-4">
+    <nav className="py-10 px-6 lg:px-10">
       <div className="flex justify-between">
         <div className="p-2">
           <Link href={"/"}>
-            <h2 className="text-2xl font-black uppercase">creitu</h2>
+            <h2 className="text-lg font-bold uppercase text-white">creitu</h2>
           </Link>
         </div>
 

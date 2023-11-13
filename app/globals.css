@@ -10,7 +10,11 @@
 }
 
 .bg-primary {
-  background: #0c7199;
+  background-color: radial-gradient(at center bottom, #131f2f, #121111);
+}
+
+html {
+  background: radial-gradient(at center bottom, #0a1018, #121111);
 }
 
 .gradient__bgs {
