@@ -17,7 +17,7 @@ const Header = () => {
             <Link href={"/signin"}>
               <Button
                 className={
-                  "bg-white text-black hover:bg-gray-200 text-md bg-primary"
+                  "bg-white text-black hover:bg-gray-200 text-md font-light"
                 }
               >
                 Sign In

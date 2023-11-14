@@ -26,7 +26,7 @@ const Hero = () => {
 
             <div className="py-2">
               <div className="flex">
-                <div className="m-auto w-4/5">
+                <div className="m-auto lg:w-4/5 sm:w-4/5 w-full">
                   <p className="text-center text-lg lg:font-normal font-light text-slate-200">
                     Your portfolio is your professional digital footprint. It
                     reflects your abilities experiences, and accomplishments
