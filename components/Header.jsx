@@ -12,10 +12,16 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="py-2 px-2 hidden">
+        <div className="py-2 px-2">
           <div className="">
             <Link href={"/signin"}>
-              <Button className={"text-md bg-primary"}>Sign In</Button>
+              <Button
+                className={
+                  "bg-white text-black hover:bg-gray-200 text-md bg-primary"
+                }
+              >
+                Sign In
+              </Button>
             </Link>
           </div>
         </div>
