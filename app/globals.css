@@ -21,6 +21,15 @@ html {
   background: radial-gradient(at center bottom, #0a1018, #121111);
 }
 
+.gradient__bg {
+  background: radial-gradient(
+    rgba(18, 30, 46, 0.137),
+    rgba(18, 30, 46, 0.557),
+    rgba(0, 0, 0, 0.875),
+    rgb(0, 0, 0)
+  );
+}
+
 .gradient__bgs {
   --size: 250px;
   --speed: 50s;

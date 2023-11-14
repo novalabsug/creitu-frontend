@@ -24,4 +24,5 @@ export const portfolioTemplatesInfo = [
   { url: "/images/template1.jpg", title: "Some other scheme" },
   { url: "/images/template2.jpg", title: "Okay am out of schemes" },
   { url: "/images/template3.jpg", title: "Started off strong though" },
+  { url: "/images/template1.jpg", title: "Was just checking" },
 ];

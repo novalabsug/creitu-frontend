@@ -12,65 +12,24 @@ const Hero = () => {
           <div className="relative">
             <div className="py-6"></div>
 
-            <div className="py-1">
-              <h1 className="text-center lg:text-2xl text-lg primary-color">
+            <div className="py-1 flex justify-center items-center">
+              <h1 className="text-center w-fit py-2 px-4 border-[0.05rem] border-white rounded-lg lg:text-lg sm:text-lg text-base primary-color">
                 Portfolio Marketplace
               </h1>
             </div>
 
             <div className="py-2">
               <p className="lg:text-6xl text-5xl font-bold text-center text-white">
-                Showcase your{" "}
-                <span className="text-[#05465f]">creative works</span> to the
-                rest of <span className="text-[#05465f]">the world</span>
+                Showcase your creative works to the rest of the world
               </p>
-            </div>
-
-            <div className="py-2 hidden">
-              <div className="flex flex-wrap justify-center">
-                <p className="lg:text-6xl sm:text-5xl text-4xl font-bold text-center">
-                  Showcase your{" "}
-                </p>
-
-                <div className="ml-4 flex">
-                  {[..."creative"].map((letter, index) => (
-                    <TextTransform key={index} letter={letter} index={index} />
-                  ))}
-                </div>
-
-                <div className="ml-4 flex">
-                  {[..."works"].map((letter, index) => (
-                    <TextTransform key={index} letter={letter} index={index} />
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex flex-wrap justify-center">
-                <p className="lg:text-6xl sm:text-5xl text-4xl font-bold text-center flex">
-                  to the rest of
-                </p>
-
-                <p className="ml-4 lg:text-6xl sm:text-5xl text-4xl font-bold text-center text-[#05465f]">
-                  the world
-                </p>
-              </div>
             </div>
 
             <div className="py-2">
               <div className="flex">
                 <div className="m-auto w-4/5">
-                  <p className="text-center text-lg lg:font-normal font-light text-white">
-                    Your portfolio is your{" "}
-                    <span className="primary-color font-bold">
-                      professional digital footprint
-                    </span>
-                    . It reflects your{" "}
-                    <span className="primary-color font-bold">abilities</span>,{" "}
-                    <span className="primary-color font-bold">experiences</span>
-                    , and{" "}
-                    <span className="primary-color font-bold">
-                      accomplishments
-                    </span>
+                  <p className="text-center text-lg lg:font-normal font-light text-slate-200">
+                    Your portfolio is your professional digital footprint. It
+                    reflects your abilities experiences, and accomplishments
                   </p>
                 </div>
               </div>
