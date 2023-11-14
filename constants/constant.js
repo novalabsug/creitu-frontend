@@ -18,3 +18,10 @@ export const landingContent1 = [
       "Explore the many projects listed and find yourself the perfect creative for your project",
   },
 ];
+
+export const portfolioTemplatesInfo = [
+  { url: "/images/template.jpg", title: "Modern green scheme" },
+  { url: "/images/template1.jpg", title: "Some other scheme" },
+  { url: "/images/template2.jpg", title: "Okay am out of schemes" },
+  { url: "/images/template3.jpg", title: "Started off strong though" },
+];
