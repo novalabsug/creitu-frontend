@@ -20,30 +20,6 @@ export default function Home() {
       {/* //---------- main content ------------------ */}
 
       {/* //section --------------------- */}
-      {/* <div className="py-8">
-        <div className="flex">
-          <div className="m-auto lg:w-4/5 w-[95%]">
-            <p className="text-center text-lg lg:font-normal font-light text-white">
-              Your portfolio is your{" "}
-              <span className="primary-color font-bold">
-                professional digital footprint
-              </span>
-              . It reflects your{" "}
-              <span className="primary-color font-bold">abilities</span>,{" "}
-              <span className="primary-color font-bold">experiences</span>, and{" "}
-              <span className="primary-color font-bold">accomplishments</span>.
-              Whether you're an artist, a designer, a developer, a marketing, or
-              a professional in any sector, your portfolio is your{" "}
-              <span className="primary-color font-bold">
-                opportunity to shine
-              </span>{" "}
-              and demonstrate what sets you apart.
-            </p>
-          </div>
-        </div>
-      </div> */}
-
-      {/* //section --------------------- */}
       <div className="py-8 hidden">
         <div className="flex">
           <div className="m-auto lg:w-[98%] xl:w-4/5">
@@ -92,7 +68,7 @@ export default function Home() {
       </div>
 
       {/* //section --------------------- */}
-      <div className="py-12">
+      <div className="py-6">
         <div className="relative h-full w-full">
           <video width="100%" height={"100%"} autoPlay loop muted>
             {/* Replace 'your-video.mp4' with the actual video file */}
@@ -137,12 +113,20 @@ export default function Home() {
       </div>
 
       {/* //section --------------------- */}
-      <div className="flex py-16">
-        <div className="m-auto lg:w-4/5 w-[90%]">
+      <div className="flex py-8">
+        <div className="m-auto lg:w-4/5 sm:w-[90%] w-[95%]">
           <div className="flex py-8 lg:flex-row flex-col">
             <div className="lg:w-2/4 w-full">
-              <div className="relative py-12">
-                {/* <VideoPlayer url={"/videos/bg.mp4"} /> */}
+              <div className="relative flex h-full justify-center items-center pr-12 lg:py-0 py-6">
+                <h3 className="text-white lg:text-2xl text-lg font-light text-center">
+                  Whether you're an artist, a designer, a developer, a
+                  marketing, or a professional in any sector, your portfolio is
+                  your{" "}
+                  <span className="primary-color font-bold lg:text-3xl text-2xl">
+                    opportunity to shine
+                  </span>{" "}
+                  and demonstrate what sets you apart.
+                </h3>
               </div>
             </div>
 
