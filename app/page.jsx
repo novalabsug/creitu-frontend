@@ -116,7 +116,7 @@ export default function Home() {
       <div className="flex py-8">
         <div className="m-auto lg:w-4/5 sm:w-[90%] w-[95%]">
           <div className="flex py-8 lg:flex-row flex-col">
-            <div className="lg:w-2/4 w-full">
+            <div className="lg:w-2/4 w-[90%] lg:block sm:block hidden">
               <div className="relative flex h-full justify-center items-center lg:pr-12 px-0 lg:py-0 py-6">
                 <h3 className="text-white lg:text-2xl text-lg font-light text-center">
                   Whether you're an artist, a designer, a developer, a
