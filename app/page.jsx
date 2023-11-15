@@ -6,11 +6,13 @@ import Hero from "@/components/Hero";
 import PortfolioTemplateCard from "@/components/PortfolioTemplateCard";
 import UiCard1 from "@/components/UiCard1";
 import VideoPlayer from "@/components/VideoPlayer";
+import { Button } from "@/components/ui/button";
 import Svg1 from "@/constants/Svg1";
 import { landingContent1, portfolioTemplatesInfo } from "@/constants/constant";
 import { ChevronRight, Dot } from "lucide-react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -186,6 +188,41 @@ export default function Home() {
                 {portfolioTemplatesInfo.map((template, index) => (
                   <PortfolioTemplateCard template={template} key={index} />
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* //section --------------------- */}
+      <div className="py-12">
+        <div className="flex">
+          <div className="m-auto xl:w-4/5 lg:w-full">
+            <div className="py-4">
+              <h3 className="text-3xl text-center text-white">
+                Do you have a question
+              </h3>
+              <p className="text-center text-white font-light">
+                Our team will happily take on any questions that you may have
+              </p>
+            </div>
+
+            <div className="py-6">
+              <div className="flex gap-8 justify-center">
+                <div>
+                  <Link href={"/about"}>
+                    <Button className="bg-white text-black text-lg py-6 px-8 font-light hover:bg-gray-200">
+                      Contact Us <ChevronRight className="font-light ml-3" />
+                    </Button>
+                  </Link>
+                </div>
+
+                <div className="py-2">
+                  <p className="text-lg font-light text-white">
+                    Or call us on{" "}
+                    <span className="font-semibold">+256 7365 524334</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

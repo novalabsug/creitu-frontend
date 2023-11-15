@@ -12,7 +12,19 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="py-2 px-2">
+        <div className="py-2 px-2 flex">
+          <div className="px-8 py-2 lg:block sm:block hidden">
+            <div className="flex gap-6">
+              <Link href={"/"}>
+                <h3 className=" text-white">Home</h3>
+              </Link>
+
+              <Link href={"/about"}>
+                <h3 className=" text-white">About</h3>
+              </Link>
+            </div>
+          </div>
+
           <div className="">
             <Link href={"/signin"}>
               <Button
