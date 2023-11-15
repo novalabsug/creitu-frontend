@@ -208,7 +208,7 @@ export default function Home() {
             </div>
 
             <div className="py-6">
-              <div className="flex gap-8 justify-center">
+              <div className="flex gap-8 justify-center lg:flex-row sm:flex-row flex-col items-center">
                 <div>
                   <Link href={"/about"}>
                     <Button className="bg-white text-black text-lg py-6 px-8 font-light hover:bg-gray-200">
