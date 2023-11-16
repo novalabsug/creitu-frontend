@@ -211,7 +211,7 @@ export default function Home() {
             <div className="py-6">
               <div className="flex gap-8 justify-center lg:flex-row sm:flex-row flex-col items-center">
                 <div>
-                  <Link href={"/about"}>
+                  <Link href={"/contact"}>
                     <Button className="bg-white text-black text-lg py-6 px-8 font-light hover:bg-gray-200">
                       Contact Us <ChevronRight className="font-light ml-3" />
                     </Button>

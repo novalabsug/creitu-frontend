@@ -10,39 +10,6 @@ const About = () => {
   return (
     <main>
       {/* //section --------------------- */}
-      <div className="py-8 flex">
-        <div className="m-auto lg:w-3/5 sm:w-3/5 w-4/5">
-          <div className="py-2">
-            <p className="text-center text-slate-200 text-lg font-semibold">
-              What we do
-            </p>
-
-            <h3 className="text-center text-white mt-2 lg:text-3xl text-2xl font-light">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              debitis, vel culpa
-            </h3>
-          </div>
-        </div>
-      </div>
-
-      {/* //section --------------------- */}
-      <div className="py-8 flex">
-        <div className="m-auto lg:w-3/5 sm:w-3/5 w-4/5">
-          <div className="py-2">
-            <p className="text-center text-slate-200 text-lg font-semibold">
-              Who we are
-            </p>
-
-            <h3 className="text-center text-white mt-2 lg:text-3xl text-2xl font-light">
-              recusandae voluptatem dolorem dignissimos cumque officiis aliquam,
-              quam repellendus eius est excepturi vitae molestiae possimus, a
-              laudantium earum!
-            </h3>
-          </div>
-        </div>
-      </div>
-
-      {/* //section --------------------- */}
       <div className="py-8">
         <div className="flex m-auto lg:w-4/5 sm:w-4/5 w-[95%]">
           <div className="py-4 px-8">

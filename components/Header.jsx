@@ -19,8 +19,8 @@ const Header = () => {
                 <h3 className=" text-white">Home</h3>
               </Link>
 
-              <Link href={"/about"}>
-                <h3 className=" text-white">About</h3>
+              <Link href={"/contact"}>
+                <h3 className=" text-white">Contact</h3>
               </Link>
             </div>
           </div>
