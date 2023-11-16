@@ -118,17 +118,32 @@ export default function Home() {
       <div className="flex py-8">
         <div className="m-auto lg:w-4/5 sm:w-[90%] w-[95%]">
           <div className="flex py-8 lg:flex-row flex-col">
-            <div className="lg:w-2/4 w-[90%] lg:block sm:block hidden">
-              <div className="relative flex h-full justify-center items-center lg:pr-12 px-0 lg:py-0 py-6">
-                <h3 className="text-white lg:text-2xl text-lg font-light text-center">
-                  Whether you're an artist, a designer, a developer, a
-                  marketing, or a professional in any sector, your portfolio is
-                  your{" "}
-                  <span className="primary-color font-bold lg:text-3xl text-2xl">
-                    opportunity to shine
-                  </span>{" "}
-                  and demonstrate what sets you apart.
-                </h3>
+            <div className="lg:w-2/4 w-[90%]">
+              <div className="relative flex h-full justify-center items-center lg:pr-12 px-0 lg:py-0 py-4">
+                <div className="py-2">
+                  <p className="text-center text-slate-200 lg:text-6xl sm:text-6xl text-4xl font-semibold">
+                    Who we are
+                  </p>
+
+                  <p className="text-center text-slate-200 lg:text-6xl sm:text-6xl text-4xl font-semibold">
+                    What we do
+                  </p>
+
+                  <div className="py-4">
+                    <h3 className="text-center text-white font-light my-3">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Ad eum illum cupiditate hic magnam quas deleniti
+                      distinctio aperiam dolores quam tempora non voluptas
+                      facilis commodi cum ullam repudiandae impedit, aliquid
+                      voluptatum. Cumque deleniti dolorum quibusdam.
+                    </h3>
+
+                    <h3 className="text-center text-white font-light my-3">
+                      Voluptas facilis commodi cum ullam repudiandae impedit,
+                      aliquid voluptatum. Cumque deleniti dolorum quibusdam.
+                    </h3>
+                  </div>
+                </div>
               </div>
             </div>
 
