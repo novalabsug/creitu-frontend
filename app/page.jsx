@@ -202,6 +202,7 @@ export default function Home() {
               <h3 className="text-3xl text-center text-white">
                 Do you have a question
               </h3>
+
               <p className="text-center text-white font-light">
                 Our team will happily take on any questions that you may have
               </p>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { RiGoogleLine } from "react-icons/ri";
 
-const SignIn = () => {
+const SignUp = () => {
   return (
     <main>
       <div className="lg:py-12 py-12">
@@ -11,7 +11,7 @@ const SignIn = () => {
           <div className="m-auto lg:w-3/5 w-full">
             <div className="py-4 lg:px-12 px-4">
               <h3 className="text-center text-2xl font-bold text-white">
-                Login to Creitu
+                SignUp to Creitu
               </h3>
 
               <div className="py-8 px-12 flex justify-center items-center flex-col">
@@ -33,9 +33,9 @@ const SignIn = () => {
 
               <div className="py-2">
                 <p className="text-center text-white">
-                  Or create new account{" "}
+                  Or have an account{" "}
                   <span className="primary-color font-bold">
-                    <Link href={"/signup"}>SignUp</Link>
+                    <Link href={"/signin"}>SignIn</Link>
                   </span>
                 </p>
               </div>
@@ -50,4 +50,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;
