@@ -13,13 +13,13 @@ const Hero = () => {
             <div className="py-6"></div>
 
             <div className="py-1 flex justify-center items-center">
-              <h1 className="text-center w-fit py-2 px-4 border-[0.05rem] border-white rounded-lg lg:text-lg sm:text-lg text-base primary-color">
+              <h1 className="text-center w-fit py-2 px-4 border-[0.05rem] border-white rounded-lg text-base primary-color bg-white bg-opacity-5">
                 Portfolio Marketplace
               </h1>
             </div>
 
             <div className="py-2">
-              <p className="lg:text-6xl text-5xl font-bold text-center text-white">
+              <p className="lg:text-6xl text-5xl font-semibold text-center text-white">
                 Showcase your creative works to the rest of the world
               </p>
             </div>

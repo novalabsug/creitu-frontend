@@ -10,7 +10,7 @@ const About = () => {
   return (
     <main>
       {/* //section --------------------- */}
-      <div className="py-8">
+      <div className="py-8 lg:block sm:block hidden">
         <div className="flex m-auto lg:w-4/5 sm:w-4/5 w-[95%]">
           <div className="py-4 px-8">
             <div className="flex justify-center items-center lg:gap-6 gap-2 lg:flex-row flex-col">
