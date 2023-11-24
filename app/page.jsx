@@ -80,10 +80,10 @@ export default function Home() {
 
           <div className="top-6 left-8 absolute z-30">
             <div className="flex">
-              <div className="lg:h-14 sm:h-14 h-8 w-[0.2rem] bg-[rgb(12,113,153)]"></div>
+              <div className="lg:h-12 sm:h-10 h-6 w-[0.2rem] my-2 bg-[rgb(12,113,153)]"></div>
 
               <div className="ml-4">
-                <h3 className="text-white font-semibold lg:text-2xl sm:text-2xl text-lg">
+                <h3 className="text-white font-semibold lg:text-3xl sm:text-2xl text-lg">
                   How Creitu works
                 </h3>
 
