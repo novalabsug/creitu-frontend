@@ -1,56 +1,66 @@
-import React from "react";
-import { Input } from "../ui/input";
-import { Label } from "../ui/label";
-import { Textarea } from "../ui/textarea";
+import React, { useState } from "react";
 import ButtonCustom from "../ButtonCustom";
+import Project from "./Project";
 
 const ProjectInfo = ({ switchTab }) => {
+  const [Projects, setProjects] = useState([]);
+  const [ActiveIndexes, setActiveIndexes] = useState([]);
+  const [IterateArray, setIterateArray] = useState([0]);
+
+  const handleDataFetch = () => {
+    // fetch project data
+    const ProjectElements = [...document.querySelectorAll("#project")];
+
+    for (const element of ProjectElements) {
+      if (element.getAttribute("data-value"))
+        if (JSON.parse(element.getAttribute("data-value")).title !== "") {
+          Projects.push(JSON.parse(element.getAttribute("data-value")));
+
+          setProjects(Projects);
+        }
+    }
+
+    switchTab((prev) => prev + 1);
+  };
+
+  const handleAddingInputs = (index, value) => {
+    if (ActiveIndexes.includes(index)) {
+      if (!value || value === "") {
+        if (ActiveIndexes.length === 1) {
+          setActiveIndexes([]);
+
+          setIterateArray(IterateArray.filter((arr) => arr !== index + 1));
+
+          return;
+        }
+
+        if (ActiveIndexes.indexOf(index) === ActiveIndexes.length - 1) {
+          setActiveIndexes(ActiveIndexes.filter((item) => item !== index));
+
+          setIterateArray(IterateArray.filter((arr) => arr !== index + 1));
+
+          return;
+        }
+      }
+
+      return;
+    }
+
+    setActiveIndexes([...ActiveIndexes, index]);
+
+    setIterateArray([...IterateArray, index + 1]);
+  };
+
   return (
     <div className="">
-      <div className="py-4 flex">
-        <div className="m-auto w-3/5">
-          <div className="py-2">
-            <Label htmlFor="description" className="text-white">
-              Project Name
-            </Label>
+      {IterateArray.map((value, index) => (
+        <Project
+          key={index}
+          index={index}
+          handleNameInput={handleAddingInputs}
+        />
+      ))}
 
-            <div className="py-1">
-              <Input
-                type="text"
-                className="w-full bg-transparent text-slate-50 py-5 focus:border-[#0c7199] focus:border-[1.2px]"
-                placeholder="title"
-              />
-            </div>
-          </div>
-
-          <div className="py-2">
-            <Label htmlFor="description" className="text-white">
-              Project demo link
-            </Label>
-
-            <div className="py-1">
-              <Input
-                type="text"
-                className="w-full bg-transparent text-slate-50 py-5 focus:border-[#0c7199] focus:border-[1.2px]"
-                placeholder="url"
-              />
-            </div>
-          </div>
-
-          <div className="py-2">
-            <Label htmlFor="description" className="text-white">
-              Description
-            </Label>
-
-            <div className="py-1">
-              <Textarea
-                name="description"
-                className="w-full bg-transparent text-slate-50 py-4 focus:border-[#0c7199] focus:border-[1.2px]"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="pt-8 pb-2 flex justify-between">
         <div
           className="w-fit"
@@ -63,7 +73,7 @@ const ProjectInfo = ({ switchTab }) => {
           />
         </div>
 
-        <div className="w-fit" onClick={() => switchTab((prev) => prev + 1)}>
+        <div className="w-fit" onClick={handleDataFetch}>
           <ButtonCustom
             type={"button"}
             text={"Continue"}

@@ -4,6 +4,7 @@ import { Label } from "../ui/label";
 import { ImagePlus, User2Icon } from "lucide-react";
 import ButtonCustom from "../ButtonCustom";
 import { portfolioTemplatesInfo } from "@/constants/constant";
+import SocialMediaInfo from "./SocialMediaInfo";
 
 const PersonalInfo = ({ switchTab }) => {
   return (
@@ -12,8 +13,8 @@ const PersonalInfo = ({ switchTab }) => {
         <div className="flex gap-6 w-fit">
           <div>
             <Label htmlFor="image" className="text-white cursor-pointer">
-              <div className="py-8 bg-gray-700 rounded-full flex justify-center items-center w-[75px] h-[75px] my-2">
-                <User2Icon size={30} className="text-white" />
+              <div className="py-8 bg-gray-700 rounded-full flex justify-center items-center w-[80px] h-[80px] my-2">
+                <ImagePlus size={30} className="text-white" />
               </div>
             </Label>
             <Input type="file" id="image" name="image" className="hidden" />
@@ -30,6 +31,7 @@ const PersonalInfo = ({ switchTab }) => {
           <Input
             type="text"
             className="w-full bg-transparent text-slate-50 py-4 focus:border-[#0c7199] focus:border-[1.2px]"
+            name="name"
             placeholder="full name"
           />
         </div>
@@ -38,6 +40,7 @@ const PersonalInfo = ({ switchTab }) => {
           <Input
             type="text"
             className="w-full bg-transparent text-slate-50 py-4 focus:border-[#0c7199] focus:border-[1.2px]"
+            name="username"
             placeholder="username"
           />
         </div>
@@ -46,6 +49,7 @@ const PersonalInfo = ({ switchTab }) => {
           <Input
             type="text"
             className="w-full bg-transparent text-slate-50 py-4 focus:border-[#0c7199] focus:border-[1.2px]"
+            name="email"
             placeholder="email"
           />
         </div>
@@ -56,6 +60,14 @@ const PersonalInfo = ({ switchTab }) => {
             className="w-full bg-transparent text-slate-50 py-4 focus:border-[#0c7199] focus:border-[1.2px]"
             placeholder="gender"
           />
+        </div>
+      </div>
+
+      <div className="pt-4 pb-2">
+        <h3 className="text-white">Add social accounts</h3>
+
+        <div className="py-2 max-h-[220px] overflow-auto">
+          <SocialMediaInfo />
         </div>
       </div>
 
@@ -75,24 +87,6 @@ const PersonalInfo = ({ switchTab }) => {
 
           <div className="py-2 w-2/5">
             <Input type="file" id="resume" name="resume" className="hidden" />
-          </div>
-        </div>
-      </div>
-
-      <div className="pt-4 pb-2 hidden">
-        <div className="py-2">
-          <Label htmlFor="template" className="text-white text-lg">
-            Choose a template
-          </Label>
-
-          <div className="py-2 flex flex-wrap gap-4">
-            {portfolioTemplatesInfo.map((template) => (
-              <div className="py-2 px-6 border-[1px] rounded-md border-slate-300 w-fit cursor-pointer hover:border-[#0c7199]">
-                <p className="font-light text-center text-white text-sm">
-                  - {template.title}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </div>

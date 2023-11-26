@@ -1,3 +1,13 @@
+import {
+  Github,
+  Gitlab,
+  Instagram,
+  Linkedin,
+  Twitch,
+  Twitter,
+} from "lucide-react";
+import { RiDiscordLine } from "react-icons/ri";
+
 export const landingContent1 = [
   {
     title: "Build your portfolio in minutes",
@@ -28,6 +38,37 @@ export const portfolioTemplatesInfo = [
 ];
 
 export const formParts = ["Personal Info", "Portfolio", "Projects", "Template"];
+
+export const SocialMediaArr = [
+  {
+    name: "X (Twitter)",
+    icon: <Twitter className="text-white" />,
+  },
+  {
+    name: "Instagram",
+    icon: <Instagram />,
+  },
+  {
+    name: "Twitch",
+    icon: <Twitch />,
+  },
+  {
+    name: "Github",
+    icon: <Github />,
+  },
+  {
+    name: "Gitlab",
+    icon: <Gitlab />,
+  },
+  {
+    name: "LinkedIn",
+    icon: <Linkedin />,
+  },
+  {
+    name: "Discord",
+    icon: <RiDiscordLine />,
+  },
+];
 
 export const Professions = [
   "Full-Stack Developer",

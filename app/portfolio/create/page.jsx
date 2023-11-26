@@ -11,7 +11,16 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 const PortfolioCreate = () => {
-  const [portfolioFormIndex, setPortfolioFormIndex] = useState(1);
+  const [portfolioFormIndex, setPortfolioFormIndex] = useState(0);
+  const [portfolioForm, setPortfolioForm] = useState({
+    user: {},
+    bio: "",
+    socials: [],
+    profession: "",
+    projects: [],
+  });
+
+  const handleDataFetch = (type, value) => {};
 
   return (
     <main>
