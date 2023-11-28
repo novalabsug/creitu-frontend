@@ -7,10 +7,10 @@ import ButtonCustom from "../ButtonCustom";
 import { Professions, ProfessionsData } from "@/constants/constant";
 import LanguagesComponent from "../LanguagesComponent";
 
-const PortfolioInfo = ({ switchTab }) => {
+const PortfolioInfo = ({ switchTab, handleDataFetch }) => {
   const [profession, setProfession] = useState("");
   const [category, setCategory] = useState("");
-  const [roles, setRoles] = useState([]);
+  const [bio, setBio] = useState("");
   const [selectedLanguages, setSelectedLanguages] = useState([]);
   const [selectedFrameworks, setSelectedFrameworks] = useState([]);
 
@@ -18,11 +18,11 @@ const PortfolioInfo = ({ switchTab }) => {
     setProfession(e.target.value);
   };
 
-  const handleCategoryInputChange = (e) => {
-    setCategory(e.target.value);
-  };
+  // const handleCategoryInputChange = (e) => {
+  //   setCategory(e.target.value);
+  // };
 
-  const handleClick = (type, value) => {
+  const handleExtraDataFetch = (type, value) => {
     if (type === "language") {
       const exists = selectedLanguages.includes(value);
 
@@ -48,9 +48,22 @@ const PortfolioInfo = ({ switchTab }) => {
     setSelectedFrameworks(newSelectedFrameworksArray);
   };
 
+  const handleClick = () => {
+    handleDataFetch("portfolio", {
+      profession,
+      bio,
+      extraData: [
+        { label: "frameworks", data: selectedFrameworks },
+        { label: "languages", data: selectedLanguages },
+      ],
+    });
+
+    switchTab((prev) => prev + 1);
+  };
+
   return (
     <div>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-4 gap-4">
         <div className="py-2">
           <Label htmlFor="category" className="text-white">
             Category
@@ -124,7 +137,7 @@ const PortfolioInfo = ({ switchTab }) => {
                         key={index}
                         language={language}
                         selectedLanguages={selectedLanguages}
-                        handleClick={handleClick}
+                        handleClick={handleExtraDataFetch}
                         type={"language"}
                       />
                     ))
@@ -148,7 +161,7 @@ const PortfolioInfo = ({ switchTab }) => {
                         key={index}
                         language={framework}
                         selectedLanguages={selectedFrameworks}
-                        handleClick={handleClick}
+                        handleClick={handleExtraDataFetch}
                         type={"framework"}
                       />
                     ))
@@ -168,6 +181,9 @@ const PortfolioInfo = ({ switchTab }) => {
         <div className="py-1">
           <Textarea
             className="w-full bg-transparent text-slate-50 py-4 focus:border-[#0c7199] focus:border-[1.2px]"
+            name="bio"
+            onChange={(e) => setBio(e.target.value)}
+            value={bio}
             placeholder="write a little about yourself"
           />
         </div>
@@ -185,7 +201,7 @@ const PortfolioInfo = ({ switchTab }) => {
           />
         </div>
 
-        <div className="w-fit" onClick={() => switchTab((prev) => prev + 1)}>
+        <div className="w-fit" onClick={handleClick}>
           <ButtonCustom
             type={"button"}
             text={"Continue"}
