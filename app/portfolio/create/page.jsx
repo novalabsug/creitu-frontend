@@ -6,6 +6,7 @@ import PortfolioInfo from "@/components/portfolioForm/PortfolioInfo";
 import ProjectInfo from "@/components/portfolioForm/ProjectInfo";
 import TemplateInfo from "@/components/portfolioForm/TemplateInfo";
 import { Input } from "@/components/ui/input";
+import { API } from "@/config/api";
 import { formParts } from "@/constants/constant";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -20,6 +21,7 @@ const PortfolioCreate = () => {
     profession: "",
     projects: [],
     extraData: [],
+    template: "",
   });
 
   const [personalInfo, setPersonalInfo] = useState({
@@ -28,29 +30,43 @@ const PortfolioCreate = () => {
     email: "",
     gender: "",
   });
-  const [socialMediaDetails, setSocialMediaDetails] = useState([]);
 
   const handleDataFetch = (type, value) => {
     if (!type || type == "") return;
 
-    if (type === "socials") {
-      portfolioForm.socials = value;
-      setPortfolioForm(portfolioForm);
-    }
-    if (type === "portfolio") {
-      portfolioForm.bio = value.bio;
-      portfolioForm.profession = value.profession;
-      portfolioForm.extraData = value.extraData;
-      setPortfolioForm(portfolioForm);
-    }
-    if (type === "projects") {
-      portfolioForm.projects = value;
+    portfolioForm[type] = value;
 
-      setPortfolioForm(portfolioForm);
-    }
+    setPortfolioForm(portfolioForm);
   };
 
-  console.log({ portfolioForm });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const NewFormData = new FormData(e.target);
+
+      NewFormData.append("bio", JSON.stringify(portfolioForm.bio));
+      NewFormData.append("socials", JSON.stringify(portfolioForm.socials));
+      NewFormData.append(
+        "profession",
+        JSON.stringify(portfolioForm.profession)
+      );
+      NewFormData.append("projects", JSON.stringify(portfolioForm.projects));
+      NewFormData.append("extraData", JSON.stringify(portfolioForm.extraData));
+      NewFormData.append("template", JSON.stringify(portfolioForm.template));
+      NewFormData.append("personalInfo", JSON.stringify(personalInfo));
+
+      // first update user data
+      const portfolioCreateRes = await API.post(
+        `/service/portfolio/new`,
+        personalInfo
+      );
+
+      console.log({ portfolioCreateRes });
+    } catch (error) {
+      console.log({ error });
+    }
+  };
 
   return (
     <main>
@@ -87,7 +103,11 @@ const PortfolioCreate = () => {
 
       <div className="py-2 flex">
         <div className="m-auto w-[70%]">
-          <form className="py-2">
+          <form
+            className="py-2"
+            onSubmit={handleSubmit}
+            encType="multipart/form-data"
+          >
             <div className="">
               {portfolioFormIndex === 0 && (
                 <PersonalInfo
@@ -106,11 +126,17 @@ const PortfolioCreate = () => {
               )}
 
               {portfolioFormIndex === 2 && (
-                <ProjectInfo switchTab={setPortfolioFormIndex} />
+                <ProjectInfo
+                  switchTab={setPortfolioFormIndex}
+                  handleDataFetch={handleDataFetch}
+                />
               )}
 
               {portfolioFormIndex === 3 && (
-                <TemplateInfo switchTab={setPortfolioFormIndex} />
+                <TemplateInfo
+                  switchTab={setPortfolioFormIndex}
+                  handleDataFetch={handleDataFetch}
+                />
               )}
             </div>
           </form>

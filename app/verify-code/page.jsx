@@ -5,59 +5,45 @@ import Loader1 from "@/components/Loader1";
 import { Input } from "@/components/ui/input";
 import { API } from "@/config/api";
 import { useAppContext } from "@/context/AppContext";
-import { SetLocalStorage } from "@/context/UserLocalStorage";
-import { GithubIcon } from "lucide-react";
+import { UpdateLocalStorage } from "@/context/UserLocalStorage";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import React, { useState } from "react";
-import { RiGoogleLine } from "react-icons/ri";
+import { useRouter, useSearchParams } from "next/navigation";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
-const SignUp = () => {
-  const [email, setEmail] = useState("");
+const VerifyCode = () => {
+  const [code, setCode] = useState("");
+  const [counter, setCounter] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
+  const userId = useSearchParams().get("user");
   const AppState = useAppContext();
+
+  if (!userId) router.push("/signin");
+
+  useEffect(() => {
+    // setInterval(() => {
+    //   if (counter > 0) setCounter(counter - 1);
+    // }, 1000);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     setIsLoading((prev) => !prev);
 
-    if (!email || email == "") {
-      toast.error("Email is required");
-      setIsLoading((prev) => !prev);
-      return;
-    }
-
     try {
-      let res = await API.post("/auth/register", { email });
+      const res = await API.post("/verification/", { user: userId, code });
 
-      const stateData = {
-        user: {
-          id: res.data.data?._id,
-          email: res.data?.data?.email,
-          username: res.data?.data?.username,
-          image: res?.data?.image && res?.data?.image,
-        },
-        loggedIn: new Date(),
-        isLoggedIn: false,
-      };
+      if (res.status === 200) {
+        UpdateLocalStorage(userId);
+        AppState?.setAppState({ ...AppState?.appState, isLoggedIn: true });
 
-      SetLocalStorage(stateData);
-      AppState?.setAppState(stateData);
-
-      if (res.status == 200)
-        res = await API.post("/verification/new", { user: res.data.data?._id });
-
-      if (res.status == 200) {
-        toast.success("Enter verification code");
-        router.push(`/verify-code?user=${res.data.data?.user}`);
+        toast.success("Logged In successfully");
+        router.push("/");
       }
     } catch (error) {
-      console.log({ error });
-      // console.log({ error });
       toast.error(error?.response?.data?.message);
     } finally {
       setIsLoading((prev) => !prev);
@@ -69,21 +55,22 @@ const SignUp = () => {
       <div className="lg:py-12 py-12">
         <div className="flex">
           <div className="m-auto lg:w-3/5 w-full">
-            <div className="py-4 lg:px-12 px-4">
-              <h3 className="text-center text-2xl font-bold text-white">
-                SignUp to Creitu
+            <div className="py-8 lg:px-12 px-4">
+              <h3 className="text-center text-xl font-bold text-white">
+                Enter 4 digit verification code
               </h3>
 
-              <div className="py-6 flex justify-center items-center flex-col">
+              <div className="py-3 flex justify-center items-center flex-col">
                 {/* signup with email form */}
                 <div className={`py-2 w-[350px]`}>
                   <form onSubmit={handleSubmit}>
                     <div className="py-2 relative">
                       <Input
-                        placeholder="Enter your email to register"
+                        placeholder="_ _ _ _"
                         className="w-full py-4 border-[1px] border-slate-300 bg-transparent text-white"
-                        name="email"
-                        onChange={(e) => setEmail(e.target.value)}
+                        name="code"
+                        maxLength={4}
+                        onChange={(e) => setCode(e.target.value)}
                       />
 
                       {isLoading && (
@@ -107,9 +94,13 @@ const SignUp = () => {
 
                 <div className="py-1">
                   <p className="text-center text-white">
-                    Or have an account{" "}
+                    Didn't get code{" "}
                     <span className="primary-color font-bold">
-                      <Link href={"/signin"}>Sign In</Link>
+                      {counter > 0 ? (
+                        `resend code ${counter}`
+                      ) : (
+                        <Link href={"/signup"}>Resend code</Link>
+                      )}
                     </span>
                   </p>
                 </div>
@@ -125,4 +116,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default VerifyCode;

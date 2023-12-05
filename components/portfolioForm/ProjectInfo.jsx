@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import ButtonCustom from "../ButtonCustom";
 import Project from "./Project";
 
-const ProjectInfo = ({ switchTab }) => {
+const ProjectInfo = ({ switchTab, handleDataFetch }) => {
   const [Projects, setProjects] = useState([]);
   const [ActiveIndexes, setActiveIndexes] = useState([]);
   const [IterateArray, setIterateArray] = useState([0]);
 
-  const handleDataFetch = () => {
+  const handleClick = () => {
     // fetch project data
     const ProjectElements = [...document.querySelectorAll("#project")];
 
@@ -19,6 +19,8 @@ const ProjectInfo = ({ switchTab }) => {
           setProjects(Projects);
         }
     }
+
+    handleDataFetch("projects", Projects);
 
     switchTab((prev) => prev + 1);
   };
@@ -73,7 +75,7 @@ const ProjectInfo = ({ switchTab }) => {
           />
         </div>
 
-        <div className="w-fit" onClick={handleDataFetch}>
+        <div className="w-fit" onClick={handleClick}>
           <ButtonCustom
             type={"button"}
             text={"Continue"}

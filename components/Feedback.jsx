@@ -5,8 +5,8 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import axios from "axios";
-import toast from "react-hot-toast";
 import { LucideLoader2 } from "lucide-react";
+import { toast } from "react-toastify";
 
 const Feedback = () => {
   const [formData, setFormData] = useState({

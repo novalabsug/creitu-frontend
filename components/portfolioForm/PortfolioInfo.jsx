@@ -52,10 +52,13 @@ const PortfolioInfo = ({ switchTab, handleDataFetch }) => {
     handleDataFetch("portfolio", {
       profession,
       bio,
-      extraData: [
-        { label: "frameworks", data: selectedFrameworks },
-        { label: "languages", data: selectedLanguages },
-      ],
+      extraData:
+        selectedFrameworks.length === 0 || selectedLanguages.length === 0
+          ? []
+          : [
+              { label: "frameworks", data: selectedFrameworks },
+              { label: "languages", data: selectedLanguages },
+            ],
     });
 
     switchTab((prev) => prev + 1);

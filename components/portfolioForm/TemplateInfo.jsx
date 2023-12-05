@@ -4,8 +4,12 @@ import PortfolioTemplateCard from "../PortfolioTemplateCard";
 import { Input } from "../ui/input";
 import ButtonCustom from "../ButtonCustom";
 
-const TemplateInfo = ({ switchTab }) => {
-  const [selectedTemplate, setSelectedTemplate] = useState("");
+const TemplateInfo = ({ switchTab, handleDataFetch }) => {
+  const [selectedTemplate, setSelectedTemplate] = useState({});
+
+  const handleClick = () => {
+    handleDataFetch("template", selectedTemplate);
+  };
 
   return (
     <div>
@@ -48,9 +52,9 @@ const TemplateInfo = ({ switchTab }) => {
           />
         </div>
 
-        <div className="w-fit">
+        <div className="w-fit" onClick={handleClick}>
           <ButtonCustom
-            type={"button"}
+            type={selectedTemplate === "" ? "button" : "submit"}
             text={"Submit"}
             variant={"bg-[#0c7199] text-white font-light text-base w-fit"}
           />

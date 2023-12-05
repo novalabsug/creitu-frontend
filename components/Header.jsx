@@ -1,8 +1,14 @@
+"use client";
+
 import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { useAppContext } from "@/context/AppContext";
+import { ChevronDown, LogOut, User } from "lucide-react";
 
 const Header = () => {
+  const AppState = useAppContext();
+
   return (
     <nav className="py-10 px-6 lg:px-10">
       <div className="flex justify-between">
@@ -26,15 +32,28 @@ const Header = () => {
           </div>
 
           <div className="">
-            <Link href={"/signin"}>
-              <Button
-                className={
-                  "bg-white text-black hover:bg-gray-200 text-md font-light"
-                }
-              >
-                Sign In
-              </Button>
-            </Link>
+            {AppState?.appState?.isLoggedIn ? (
+              <Link href={"/logout"}>
+                <Button
+                  className={
+                    "bg-white gap-2 text-black hover:bg-gray-200 text-md font-light"
+                  }
+                >
+                  <LogOut size={20} />
+                  Log Out
+                </Button>
+              </Link>
+            ) : (
+              <Link href={"/signin"}>
+                <Button
+                  className={
+                    "bg-white text-black hover:bg-gray-200 text-md font-light"
+                  }
+                >
+                  Sign In
+                </Button>
+              </Link>
+            )}
           </div>
         </div>
       </div>
