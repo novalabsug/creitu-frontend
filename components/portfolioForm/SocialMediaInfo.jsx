@@ -1,7 +1,6 @@
 import { SocialMediaArr } from "@/constants/constant";
 import React, { useState } from "react";
 import { Input } from "../ui/input";
-import toast from "react-hot-toast";
 import SocialMediaAccount from "./SocialMediaAccount";
 
 const SocialMediaInfo = () => {
