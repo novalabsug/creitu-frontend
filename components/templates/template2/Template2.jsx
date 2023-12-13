@@ -31,19 +31,19 @@ const Template2 = () => {
 
                 <div className="flex gap-4">
                   <div className="cursor-pointer">
-                    <p className="text-gray-600 text-sm pt-1">About</p>
+                    <p className="text-gray-600 text-base pt-1">About</p>
                   </div>
 
                   <div className="cursor-pointer">
-                    <p className="text-gray-600 text-sm pt-1">Projects</p>
+                    <p className="text-gray-600 text-base pt-1">Projects</p>
                   </div>
 
                   <div className="cursor-pointer">
-                    <p className="text-gray-600 text-sm pt-1">Resume</p>
+                    <p className="text-gray-600 text-base pt-1">Resume</p>
                   </div>
 
                   <div className="cursor-pointer">
-                    <p className="text-gray-600 text-sm pt-1">Contact</p>
+                    <p className="text-gray-600 text-base pt-1">Contact</p>
                   </div>
                 </div>
               </div>
