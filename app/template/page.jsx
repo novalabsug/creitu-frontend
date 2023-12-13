@@ -89,13 +89,12 @@ const Template1 = () => {
                 <div className="py-2">
                   <div className="flex py-3 justify-center">
                     <div>
-                      <Button
-                        className={
-                          "bg-white gap-2 text-black hover:bg-gray-200 text-sm font-light"
-                        }
-                      >
+                      <Button className="bg-white gap-2 text-black hover:bg-gray-200 text-sm font-light group">
                         Download Resume
-                        <DownloadCloud size={20} />
+                        <DownloadCloud
+                          size={20}
+                          className="group-hover:animate-bounce group-hover:text-cyan-600 duration-200"
+                        />
                       </Button>
                     </div>
                   </div>

@@ -9,10 +9,6 @@
   color: #05465f;
 }
 
-* {
-  transition: all 0.4s ease;
-}
-
 .bg-primary {
   background-color: radial-gradient(at center bottom, #131f2f, #121111);
 }
