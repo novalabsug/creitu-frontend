@@ -2,6 +2,7 @@
 
 import CustomArrowDots from "@/components/CustomArrowDots";
 import Feedback from "@/components/Feedback";
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import PortfolioTemplateCard from "@/components/PortfolioTemplateCard";
 import UiCard1 from "@/components/UiCard1";
@@ -17,6 +18,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
+      <Header />
+
       <Hero />
 
       {/* //---------- main content ------------------ */}

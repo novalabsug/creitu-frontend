@@ -33,7 +33,6 @@ export default function RootLayout({ children }) {
         />
         <AppContext>
           <Parent>
-            <Header />
             {children}
             <Footer />
           </Parent>
