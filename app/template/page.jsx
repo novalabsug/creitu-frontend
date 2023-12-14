@@ -7,6 +7,7 @@ import React from "react";
 const TemplatePage = () => {
   return (
     <main>
+      <Template1 />
       <Template2 />
     </main>
   );

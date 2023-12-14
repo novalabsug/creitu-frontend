@@ -17,15 +17,15 @@ import Image from "next/image";
 const Template1 = () => {
   return (
     <div>
-      {/* <div className="py-4 px-16">
+      <div className="py-6 px-16">
         <Link href={"/"}>
           <h3 className="text-xl font-semibold text-slate-100 uppercase">
             tommy versetti
           </h3>
         </Link>
-      </div> */}
+      </div>
 
-      <div className="flex">
+      <div className="flex py-8">
         <div className="m-auto w-[90%]">
           <div className="flex">
             <div className="w-[35%]">

@@ -30,26 +30,30 @@ const Template2 = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="cursor-pointer">
+                  <div className="cursor-pointer pb-1 border-b-[1.5px] border-b-slate-100 hover:border-b-red-600">
                     <p className="text-gray-600 text-base pt-1">About</p>
                   </div>
 
-                  <div className="cursor-pointer">
+                  <div className="cursor-pointer pb-1 border-b-[1.5px] border-b-slate-100 hover:border-b-red-600">
                     <p className="text-gray-600 text-base pt-1">Projects</p>
                   </div>
 
-                  <div className="cursor-pointer">
+                  <div className="cursor-pointer pb-1 border-b-[1.5px] border-b-slate-100 hover:border-b-red-600">
                     <p className="text-gray-600 text-base pt-1">Resume</p>
                   </div>
 
-                  <div className="cursor-pointer">
+                  <div className="cursor-pointer pb-1 border-b-[1.5px] border-b-slate-100 hover:border-b-red-600">
                     <p className="text-gray-600 text-base pt-1">Contact</p>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
 
-              {/* // hero section */}
-              <div className="py-12">
+          {/* // hero section */}
+          <div className="py-12">
+            <div className="flex">
+              <div className="m-auto w-[85%]">
                 <div className="flex gap-4">
                   <div className="w-3/5">
                     <div className="py-8">
@@ -62,6 +66,12 @@ const Template2 = () => {
                             Jeremy Ma
                           </span>
                         </h3>
+
+                        <div className="py-2">
+                          <h3 className="text-7xl font-bold capitalize text-slate-100 text-stroke relative before:content-[attr(before)] before:absolute before:z-10 before:top-0 before:left-0 before:text-red-600 before:w-[76%] before:h-full before:border-r-[1.2px] before:border-r-red-600 before:overflow-hidden">
+                            content creator
+                          </h3>
+                        </div>
                       </div>
 
                       <div className="py-2">
@@ -118,53 +128,57 @@ const Template2 = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
 
-              <div className="py-12">
-                <div className="flex justify-center items-center">
-                  <div className="w-4/5">
-                    <p className="text-center text-5xl font-thin">
-                      crafting stories that capture our hearts and ignite our
-                      imaginations. through{" "}
-                      <span className="font-semibold">design</span> and{" "}
-                      <span className="font-semibold">innovation</span>
-                    </p>
-                  </div>
-                </div>
+        <div className="py-12 hidden">
+          <div className="flex justify-center items-center">
+            <div className="w-4/5">
+              <p className="text-center text-5xl font-thin">
+                crafting stories that capture our hearts and ignite our
+                imaginations. through{" "}
+                <span className="font-semibold">design</span> and{" "}
+                <span className="font-semibold">innovation</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* // projects section */}
+        <div className="py-12">
+          <div className="flex">
+            <div className="m-auto w-4/5">
+              <div className="py-2">
+                <p className="font-light text-red-600">Behold my works</p>
+                <h3 className="text-5xl font-bold text-gray-600">
+                  My Projects
+                </h3>
               </div>
 
-              {/* // projects section */}
-              <div className="py-12">
-                <div className="py-2">
-                  <p className="font-light text-red-600">Behold my works</p>
-                  <h3 className="text-5xl font-bold text-gray-600">
-                    My Projects
-                  </h3>
-                </div>
+              <div className="py-4">
+                <div className="grid grid-cols-3 gap-4">
+                  <PortfolioCard
+                    portfolio={{
+                      image: "/images/template1.jpg",
+                      title: "Set to true to keep the cursor open",
+                    }}
+                  />
 
-                <div className="py-4">
-                  <div className="grid grid-cols-3 gap-4">
-                    <PortfolioCard
-                      portfolio={{
-                        image: "/images/template1.jpg",
-                        title: "Set to true to keep the cursor open",
-                      }}
-                    />
+                  <PortfolioCard
+                    portfolio={{
+                      image: "/images/template2.jpg",
+                      title: "for use with capped collections",
+                    }}
+                  />
 
-                    <PortfolioCard
-                      portfolio={{
-                        image: "/images/template2.jpg",
-                        title: "for use with capped collections",
-                      }}
-                    />
-
-                    <PortfolioCard
-                      portfolio={{
-                        image: "/images/portfolio7.jpg",
-                        title:
-                          "Converts this query to a customized, reusable query ",
-                      }}
-                    />
-                  </div>
+                  <PortfolioCard
+                    portfolio={{
+                      image: "/images/portfolio7.jpg",
+                      title:
+                        "Converts this query to a customized, reusable query ",
+                    }}
+                  />
                 </div>
               </div>
             </div>
