@@ -1,19 +1,50 @@
-import { Facebook, Instagram, Linkedin, Twitch, Twitter } from "lucide-react";
+"use client";
+
+import {
+  ArrowDown,
+  Facebook,
+  Home,
+  Instagram,
+  Linkedin,
+  ListVideoIcon,
+  Mail,
+  Twitch,
+  Twitter,
+  User,
+  User2,
+} from "lucide-react";
 import { Dancing_Script } from "next/font/google";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import ProjectSlider from "./ProjectSlider";
+import Sidenav from "./Sidenav";
+import HomeTab from "./tabs/Home";
+import ProjectsTab from "./tabs/Projects";
+import AboutTab from "./tabs/About";
+import ContactTab from "./tabs/Contact";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
 const Template3 = () => {
+  const [activeTab, setActiveTab] = useState("projects");
+
+  const handleTabSwitch = (tab) => {
+    if (tab === "") return;
+
+    setActiveTab((prev) => tab);
+  };
+
   return (
     <div className="bg-black h-screen">
       <div className="flex h-full">
-        <div className="p-6 w-[70%]">
+        <div
+          className={`p-6 ${
+            activeTab === "projects" ? "w-[90%]" : "w-[70%]"
+          } duration-300`}
+        >
           <div className="py-2 px-4 flex justify-between">
             <div>
-              <Link href={"/"}>
+              <Link href={"/"} className="">
                 {" "}
                 <h3
                   className={`${dancingScript.className} text-white text-4xl font-bold`}
@@ -24,59 +55,48 @@ const Template3 = () => {
             </div>
 
             <div className="flex gap-4 py-2">
-              <div className="cursor-pointer">
+              <div className="px-4">
+                <button
+                  type="button"
+                  className="py-2 px-3 text-black bg-gray-100 rounded-md cursor-pointer text-sm flex gap-2 group"
+                >
+                  Resume
+                  <ArrowDown
+                    size={20}
+                    className="group-hover:text-green-500 group-hover:animate-bounce duration-200"
+                  />
+                </button>
+              </div>
+
+              <div className="cursor-pointer py-1">
                 <Facebook className="text-white" size={22} strokeWidth={1.5} />
               </div>
-              <div className="cursor-pointer">
+
+              <div className="cursor-pointer py-1">
                 <Twitter className="text-white" size={22} strokeWidth={1.5} />
               </div>
-              <div className="cursor-pointer">
+
+              <div className="cursor-pointer py-1">
                 <Instagram className="text-white" size={22} strokeWidth={1.5} />
               </div>
-              <div className="cursor-pointer">
+
+              <div className="cursor-pointer py-1">
                 <Linkedin className="text-white" size={22} strokeWidth={1.5} />
               </div>
-              <div className="cursor-pointer">
+
+              <div className="cursor-pointer py-1">
                 <Twitch className="text-white" size={22} strokeWidth={1.5} />
               </div>
             </div>
           </div>
 
-          <div className="py-12 px-4">
-            <div className="py-8"></div>
-
-            <div className="w-4/5 py-4">
-              <h3 className="text-6xl font-bold text-white">
-                Full stack developer, JavaScript Developer
-              </h3>
-            </div>
-
-            <div className="py-4">
-              <p className="text-lg font-light text-white">
-                <span className="text-3xl text-green-500">4+</span> years of
-                experience
-              </p>
-            </div>
-
-            <div className="py-3"></div>
-
-            <div className="py-6">
-              <div className="flex gap-2">
-                <div className="flex items-center">
-                  <div className="h-[1px] w-[100px] bg-white"></div>
-                </div>
-
-                <p className="text-4xl font-light uppercase text-green-500">
-                  Jim Moriarty
-                </p>
-              </div>
-            </div>
-          </div>
+          {activeTab === "home" && <HomeTab />}
+          {activeTab === "projects" && <ProjectsTab />}
+          {activeTab === "about" && <AboutTab />}
+          {activeTab === "contact" && <ContactTab />}
         </div>
 
-        <div className="w-[30%] h-full">
-          <ProjectSlider />
-        </div>
+        <Sidenav page={activeTab} handleTabSwitch={handleTabSwitch} />
       </div>
     </div>
   );
