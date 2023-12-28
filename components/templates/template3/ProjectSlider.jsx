@@ -31,8 +31,6 @@ const ProjectSlider = ({ page }) => {
     }, 7000);
   }, [counter]);
 
-  console.log({ counter });
-
   return (
     <div className="h-full w-full">
       <div className="h-full w-full relative">
@@ -46,7 +44,7 @@ const ProjectSlider = ({ page }) => {
           />
         ))}
 
-        <div className="absolute top-0 left-0 bottom-0 right-0 z-20 bg-[#61484834]"></div>
+        <div className="absolute top-0 left-0 bottom-0 right-0 z-30 bg-[#0000003a]"></div>
       </div>
     </div>
   );
