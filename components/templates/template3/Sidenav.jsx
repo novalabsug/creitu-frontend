@@ -19,7 +19,7 @@ const Sidenav = ({ page, handleTabSwitch }) => {
         <div className="h-[2px] bg-black rounded w-[1rem] my-1"></div>
       </div>
 
-      <div className="absolute top-[30%] left-6 z-20 py-2 px-2">
+      <div className="absolute top-[30%] left-6 z-20 py-2 px-2 z-50">
         <div className="my-2 p-2 flex gap-2 relative -left-20 z-20 invisible group-hover:left-0 group-hover:visible duration-300 group-hover:-z-10 delay-75 group/navLink1">
           <Home
             className={`${
