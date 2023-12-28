@@ -26,7 +26,7 @@ import ContactTab from "./tabs/Contact";
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
 const Template3 = () => {
-  const [activeTab, setActiveTab] = useState("projects");
+  const [activeTab, setActiveTab] = useState("home");
 
   const handleTabSwitch = (tab) => {
     if (tab === "") return;
