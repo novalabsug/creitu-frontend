@@ -4,7 +4,7 @@ import Project from "./projects/Project";
 const ProjectsTab = () => {
   return (
     <div>
-      <div className="py-8 px-8">
+      <div className="py-8 lg:px-8 px-2 h-screen overflow-auto lg:min-h-auto min-h-screen">
         <div className="py-2">
           <h3 className="text-3xl font-semibold text-white">My Projects</h3>
 
@@ -13,8 +13,8 @@ const ProjectsTab = () => {
           <div className="h-[1.2px] w-[100px] bg-green-500"></div>
         </div>
 
-        <div className="py-4 max-h-[450px] overflow-auto">
-          <div className="grid grid-cols-3 gap-4">
+        <div className="py-4 lg:max-h-[450px] h-screen overflow-auto">
+          <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
             <Project
               title={"A random project"}
               description={

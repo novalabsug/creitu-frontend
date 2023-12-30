@@ -25,7 +25,7 @@ const PortfolioCard = ({ portfolio }) => {
 
         <div className="py-2 flex gap-2">
           <Link href={"/"}>
-            <div className="group/btn hover:bg-cyan-600 duration-100 bg-slate-100 py-1 px-2 rounded cursor-pointer flex gap-2 justify-center items-center">
+            <div className="group/btn hover:bg-cyan-600 duration-300 bg-slate-100 py-1 px-2 rounded cursor-pointer flex gap-2 justify-center items-center">
               <p className="font-light text-sm hidden group-hover/btn:block group-hover:text-slate-100 duration-200">
                 live demo
               </p>
@@ -37,7 +37,7 @@ const PortfolioCard = ({ portfolio }) => {
           </Link>
 
           <Link href={"/"}>
-            <div className="group/btn-1 hover:bg-cyan-600 duration-200 bg-slate-100 py-1 px-2 rounded cursor-pointer flex gap-2 justify-center items-center">
+            <div className="group/btn-1 hover:bg-cyan-600 duration-300 bg-slate-100 py-1 px-2 rounded cursor-pointer flex gap-2 justify-center items-center">
               <p className="font-light text-sm hidden group-hover/btn-1:block group-hover:text-slate-100 duration-200">
                 code
               </p>

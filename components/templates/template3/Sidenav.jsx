@@ -12,13 +12,8 @@ const Sidenav = ({ page, handleTabSwitch }) => {
     <div
       className={`${
         page === "projects" ? "w-[10%]" : "w-[30%]"
-      } h-full relative group overflow-hidden duration-300`}
+      } h-full relative group overflow-hidden duration-300 lg:block hidden`}
     >
-      <div className="absolute top-6 left-8 z-20 bg-white p-4 rounded-full">
-        <div className="h-[2px] bg-black rounded w-[1rem] my-1"></div>
-        <div className="h-[2px] bg-black rounded w-[1rem] my-1"></div>
-      </div>
-
       <div className="absolute top-[30%] left-6 z-20 py-2 px-2 z-50">
         <div className="my-2 p-2 flex gap-2 relative -left-20 z-20 invisible group-hover:left-0 group-hover:visible duration-300 group-hover:-z-10 delay-75 group/navLink1">
           <Home

@@ -18,8 +18,8 @@ const ContactTab = () => {
       </div>
 
       <div className="py-3">
-        <div className="flex gap-4">
-          <div className="w-2/4 py-2">
+        <div className="flex gap-4 lg:flex-row flex-col">
+          <div className="lg:w-2/4 w-full py-2">
             <div className="flex gap-2">
               <div className="cursor-pointer py-1">
                 <Facebook className="text-white" size={22} strokeWidth={1.5} />
@@ -69,7 +69,7 @@ const ContactTab = () => {
             </div>
           </div>
 
-          <div className="w-2/4">
+          <div className="lg:w-2/4 w-full">
             <div className="py-2">
               <h3 className="font-semibold text-white text-lg">
                 Leave a message
@@ -77,7 +77,7 @@ const ContactTab = () => {
             </div>
 
             <form action="">
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid lg:grid-cols-2 grid-cols-1 gap-2">
                 <div className="py-1">
                   <label htmlFor="name" className="text-white text-sm">
                     Name

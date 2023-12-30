@@ -3,7 +3,7 @@ import React from "react";
 
 const Project = ({ title, description, image }) => {
   return (
-    <div className="group relative overflow-hidden h-[260px]">
+    <div className="group relative overflow-hidden lg:h-[260px] h-[220px]">
       <div className="relative w-full h-full">
         <img src={image} alt={title} className="w-full h-full object-cover" />
 

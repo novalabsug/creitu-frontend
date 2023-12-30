@@ -1,4 +1,12 @@
-import { Facebook, Home, Instagram, Twitch, Twitter } from "lucide-react";
+import {
+  Facebook,
+  Home,
+  Instagram,
+  Mail,
+  Phone,
+  Twitch,
+  Twitter,
+} from "lucide-react";
 import {
   Oswald,
   Poppins,
@@ -89,10 +97,10 @@ const Template2 = () => {
                   <div className="w-2/5 group">
                     <div className="py-4"></div>
 
-                    <div className="group-hover:w-full group-hover:before:hidden group-hover:before:-rotate-6 duration-200 delay-100 relative w-4/5 h-full before:z-0 before:absolute before:-top-8 before:-right-6 before:bg-slate-200 before:rounded-lg before:rotate-6 before:h-full before:w-full">
+                    <div className="group-hover:w-full group-hover:before:hidden group-hover:before:-rotate-6 duration-300 relative w-4/5 h-full before:z-0 before:absolute before:-top-8 before:-right-6 before:bg-slate-200 before:rounded-lg before:rotate-6 before:h-full before:w-full">
                       <Image
                         src={"/images/portfolio3.jpeg"}
-                        className="w-full h-auto object-cover rounded-lg group-hover:object-contain group-hover:absolute duration-200"
+                        className="w-full h-auto object-cover rounded-lg group-hover:object-contain group-hover:absolute duration-300 delay-700"
                         fill
                         alt="profile-image"
                       />
@@ -180,6 +188,95 @@ const Template2 = () => {
                     }}
                   />
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* contact section */}
+        <div className="py-12">
+          <div className="py-4">
+            <div className="flex justify-center gap-4">
+              <div className="flex gap-2">
+                <div>
+                  <Mail />
+                </div>
+
+                <p className="text-lg font-light">jeremyma@gmail.com</p>
+              </div>
+
+              <div className="w-[0.1rem] h-8 bg-red-500"></div>
+
+              <div className="flex gap-2">
+                <div>
+                  <Phone />
+                </div>
+
+                <p className="text-lg font-light">07885 367625</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="py-2">
+            <div className="flex">
+              <div className="m-auto w-2/4">
+                <div className="py-2">
+                  <h3 className="text-center font-semibold text-2xl text-gray-600">
+                    Get in touch with me
+                  </h3>
+                </div>
+
+                <form action="">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="py-2">
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="your names"
+                        className="outline-none border-[1.2px] text-sm py-3 px-4 rounded bg-gray-200 w-full focus:border-red-500"
+                      />
+                    </div>
+
+                    <div className="py-2">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="email"
+                        className="outline-none border-[1.2px] text-sm py-3 px-4 rounded bg-gray-200 w-full focus:border-red-500"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="py-2">
+                    <input
+                      type="text"
+                      name="subject"
+                      id="subject"
+                      placeholder="subject"
+                      className="outline-none border-[1.2px] text-sm py-3 px-4 rounded bg-gray-200 w-full focus:border-red-500"
+                    />
+                  </div>
+
+                  <div className="py-2">
+                    <textarea
+                      name="message"
+                      id="message"
+                      placeholder="message"
+                      className="outline-none border-[1.2px] text-sm py-3 px-4 rounded bg-gray-200 w-full focus:border-red-500"
+                    ></textarea>
+                  </div>
+
+                  <div className="py-3">
+                    <button
+                      type="submit"
+                      className="hover:text-slate-100 hover:bg-red-500 hover:border-red-500 rounded-md py-2 px-3 text-sm outline-none bg-transparent border-[1.2px] border-slate-600"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
