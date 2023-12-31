@@ -2,6 +2,7 @@
 
 import CustomArrowDots from "@/components/CustomArrowDots";
 import Feedback from "@/components/Feedback";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import PortfolioTemplateCard from "@/components/PortfolioTemplateCard";

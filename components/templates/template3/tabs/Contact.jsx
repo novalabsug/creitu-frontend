@@ -77,7 +77,7 @@ const ContactTab = () => {
             </div>
 
             <form action="">
-              <div className="grid lg:grid-cols-2 grid-cols-1 gap-2">
+              <div className="grid lg:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-2">
                 <div className="py-1">
                   <label htmlFor="name" className="text-white text-sm">
                     Name
