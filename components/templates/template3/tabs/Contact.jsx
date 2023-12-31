@@ -11,7 +11,7 @@ import React from "react";
 
 const ContactTab = () => {
   return (
-    <div className="p-8 h-full overflow-auto">
+    <div className="lg:p-8 p-4 h-full overflow-auto">
       <div className="py-3">
         <p className="text-green-500 font-light">contact</p>
         <h3 className="text-3xl text-white font-semibold">Let's talk</h3>

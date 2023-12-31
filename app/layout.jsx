@@ -32,10 +32,7 @@ export default function RootLayout({ children }) {
           theme="light"
         />
         <AppContext>
-          <Parent>
-            {children}
-            <Footer />
-          </Parent>
+          <Parent>{children}</Parent>
         </AppContext>
       </body>
     </html>
