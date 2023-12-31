@@ -42,7 +42,7 @@ const Template3 = () => {
 
   return (
     <>
-      <div className="bg-black h-screen overflow-hidden w-full">
+      <div className="bg-black lg:h-screen h-full overflow-hidden w-full">
         <MobileNav
           closeDisplay={setMobileNavDisplay}
           handleNavClick={handleNavClick}
@@ -51,7 +51,7 @@ const Template3 = () => {
 
         <div className="flex h-full">
           <div
-            className={`p-6 ${
+            className={`p-6 relative ${
               activeTab === "projects"
                 ? "lg:w-[90%] w-full"
                 : "lg:w-[70%] w-full"
@@ -129,17 +129,17 @@ const Template3 = () => {
             {activeTab === "projects" && <ProjectsTab />}
             {activeTab === "about" && <AboutTab />}
             {activeTab === "contact" && <ContactTab />}
+
+            <div className="py-3 absolute bottom-0 right-0 left-0 bg-black z-50">
+              <p className="text-center text-white">
+                {new Date().getFullYear()} &copy; copyright.{" "}
+                <span className="primary-color font-bold">creitu</span>
+              </p>
+            </div>
           </div>
 
           <Sidenav page={activeTab} handleTabSwitch={handleTabSwitch} />
         </div>
-      </div>
-
-      <div className="py-3 fixed -bottom-16 right-0 left-0 bg-black z-50">
-        <p className="text-center text-white">
-          {new Date().getFullYear()} &copy; copyright.{" "}
-          <span className="primary-color font-bold">creitu</span>
-        </p>
       </div>
     </>
   );
