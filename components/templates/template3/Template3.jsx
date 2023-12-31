@@ -51,7 +51,7 @@ const Template3 = () => {
 
         <div className="flex h-full">
           <div
-            className={`p-6 relative ${
+            className={`lg:p-6 p-2 relative ${
               activeTab === "projects"
                 ? "lg:w-[90%] w-full"
                 : "lg:w-[70%] w-full"

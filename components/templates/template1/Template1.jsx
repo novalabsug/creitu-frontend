@@ -405,6 +405,13 @@ const Template1 = () => {
           </div>
         </div>
       </div>
+
+      <div className="py-4 bg-black z-50">
+        <p className="text-center text-white">
+          {new Date().getFullYear()} &copy; copyright.{" "}
+          <span className="primary-color font-bold">creitu</span>
+        </p>
+      </div>
     </>
   );
 };
