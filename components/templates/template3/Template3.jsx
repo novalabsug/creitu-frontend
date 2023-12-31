@@ -27,7 +27,7 @@ import MobileNav from "./MobileNav";
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
 const Template3 = () => {
-  const [activeTab, setActiveTab] = useState("about");
+  const [activeTab, setActiveTab] = useState("home");
   const [mobileNavDisplay, setMobileNavDisplay] = useState(false);
 
   const handleTabSwitch = (tab) => {
@@ -125,7 +125,9 @@ const Template3 = () => {
               </div>
             </div>
 
-            {activeTab === "home" && <HomeTab />}
+            {(activeTab === "home" || activeTab == "" || !activeTab) && (
+              <HomeTab />
+            )}
             {activeTab === "projects" && <ProjectsTab />}
             {activeTab === "about" && <AboutTab />}
             {activeTab === "contact" && <ContactTab />}
