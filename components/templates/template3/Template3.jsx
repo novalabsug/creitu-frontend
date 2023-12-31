@@ -41,7 +41,7 @@ const Template3 = () => {
   };
 
   return (
-    <div className="bg-black h-screen">
+    <div className="bg-black lg:h-screen h-full overflow-hidden w-full">
       <MobileNav
         closeDisplay={setMobileNavDisplay}
         handleNavClick={handleNavClick}

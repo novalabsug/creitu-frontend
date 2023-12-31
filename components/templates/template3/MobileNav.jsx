@@ -18,7 +18,7 @@ const MobileNav = ({ closeDisplay, handleNavClick, isActive }) => {
   return (
     <div
       className={`bg-[#1c1c1c] fixed top-0 bottom-0 right-0 w-4/5 z-50 p-8 ${
-        isActive ? "visible translate-x-0" : "invisible translate-x-[150%]"
+        isActive ? "block translate-x-0" : "hidden translate-x-[150%]"
       } duration-300 delay-100`}
     >
       <div className="py-4"></div>

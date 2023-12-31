@@ -6,7 +6,7 @@ const HomeTab = () => {
       <div className="py-8"></div>
 
       <div className="lg:w-4/5 w-full py-4">
-        <h3 className="lg:text-6xl text-3xl font-bold text-white lg:text-left text-center">
+        <h3 className="lg:text-6xl text-5xl font-bold text-white lg:text-left text-center">
           Full stack developer, JavaScript Developer
         </h3>
       </div>
@@ -18,7 +18,7 @@ const HomeTab = () => {
         </p>
       </div>
 
-      <div className="py-3"></div>
+      <div className="lg:py-3 py-1"></div>
 
       <div className="py-6">
         <div className="flex gap-2 lg:justify-normal justify-center">
