@@ -75,7 +75,7 @@ const Template1 = () => {
         <div className="flex py-8">
           <div className="m-auto w-[90%]">
             <div className="flex lg:flex-row flex-col">
-              <div className="lg:w-[35%] m-auto sm:w-3/5 w-4/5">
+              <div className="lg:w-[35%] m-auto sm:w-3/5 w-full">
                 <div className="p-2">
                   <div className="py-2 relative">
                     <div className="h-[300px]">
@@ -172,7 +172,7 @@ const Template1 = () => {
                 </div>
               </div>
 
-              <div className="lg:w-[65%] w-full px-4">
+              <div className="lg:w-[65%] w-full lg:px-4 px-1">
                 <div className="flex lg:flex-row flex-col">
                   <div className="lg:w-4/5 w-full lg:p-0 px-4">
                     <div>
@@ -330,7 +330,7 @@ const Template1 = () => {
                 </div>
 
                 <div className="py-3">
-                  <div className="auto-rows-auto gap-2 lg:columns-3 columns-2 h-full w-full ">
+                  <div className="auto-rows-auto gap-2 lg:columns-3 sm:columns-2 columns-1 h-full w-full ">
                     <PortfolioCard
                       portfolio={{
                         image: "/images/template2.jpg",
