@@ -41,7 +41,7 @@ const PortfolioCard = ({ portfolio }) => {
 
           <Link href={"/"}>
             <div className="group/btn-1 hover:bg-cyan-600 duration-300 lg:bg-slate-100 bg-cyan-600 py-1 px-2 rounded cursor-pointer flex gap-2 justify-center items-center w-fit">
-              <p className="font-light text-sm lg:hidden block group-hover/btn:block group-hover:text-slate-100 duration-200">
+              <p className="font-light text-sm lg:hidden block group-hover/btn-1:block group-hover:text-slate-100 duration-200">
                 code
               </p>
 
