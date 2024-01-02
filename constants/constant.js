@@ -30,11 +30,16 @@ export const landingContent1 = [
 ];
 
 export const portfolioTemplatesInfo = [
-  { url: "/images/template.jpg", title: "Modern green scheme" },
-  { url: "/images/template1.jpg", title: "Some other scheme" },
-  { url: "/images/template2.jpg", title: "Okay am out of schemes" },
-  { url: "/images/template3.jpg", title: "Started off strong though" },
-  { url: "/images/template1.jpg", title: "Was just checking" },
+  {
+    url: "/images/templates/template1.png",
+    title: "Single-page dark theme",
+    id: "template1",
+  },
+  {
+    url: "/images/templates/template3.png",
+    title: "Multi-page dark theme",
+    id: "template3",
+  },
 ];
 
 export const formParts = ["Personal Info", "Portfolio", "Projects", "Template"];

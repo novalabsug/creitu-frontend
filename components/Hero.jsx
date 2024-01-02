@@ -8,18 +8,18 @@ const Hero = () => {
   return (
     <div className="relative">
       <div className="flex">
-        <div className="m-auto lg:w-[70%] sm:w-[80%] w-[95%] relative">
+        <div className="m-auto lg:w-[70%] sm:w-[80%] w-[90%] relative">
           <div className="relative">
             <div className="py-6"></div>
 
             <div className="py-1 flex justify-center items-center">
-              <h1 className="text-center w-fit py-2 px-4 border-[0.05rem] border-white rounded-lg text-sm primary-color bg-white bg-opacity-5">
+              <h1 className="text-center w-fit py-2 px-4 border-[0.05rem] border-white rounded-lg lg:text-sm text-xs primary-color bg-white bg-opacity-5">
                 Portfolio Marketplace
               </h1>
             </div>
 
             <div className="py-2">
-              <p className="lg:text-6xl text-5xl font-semibold text-center text-white">
+              <p className="lg:text-6xl sm:text-5xl text-4xl font-semibold text-center text-white">
                 Showcase your creative works to the rest of the world
               </p>
             </div>
@@ -27,7 +27,7 @@ const Hero = () => {
             <div className="py-2">
               <div className="flex">
                 <div className="m-auto lg:w-4/5 sm:w-4/5 w-full">
-                  <p className="text-center text-lg lg:font-normal font-light text-slate-200">
+                  <p className="text-center lg:text-lg text-base lg:font-normal font-light text-slate-200">
                     Your portfolio is your professional digital footprint. It
                     reflects your abilities experiences, and accomplishments
                   </p>
@@ -37,7 +37,7 @@ const Hero = () => {
 
             <div className="py-8">
               <div className="flex justify-center items-center">
-                <Button className="bg-white text-black text-lg py-6 px-8 font-light hover:bg-gray-200">
+                <Button className="bg-white text-black lg:text-lg text-base py-6 px-8 font-light hover:bg-gray-200">
                   Get Started
                 </Button>
               </div>

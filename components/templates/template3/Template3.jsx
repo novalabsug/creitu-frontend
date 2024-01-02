@@ -59,7 +59,7 @@ const Template3 = () => {
           >
             <div className="py-2 lg:px-4 px-2 flex justify-between">
               <div>
-                <Link href={"/template"} className="">
+                <Link href={"/templates"} className="">
                   {" "}
                   <h3
                     className={`${dancingScript.className} text-white lg:text-4xl text-3xl font-bold`}

@@ -25,6 +25,10 @@ const Header = () => {
                 <h3 className=" text-white">Home</h3>
               </Link>
 
+              <Link href={"/templates"}>
+                <h3 className=" text-white">Templates</h3>
+              </Link>
+
               <Link href={"/contact"}>
                 <h3 className=" text-white">Contact</h3>
               </Link>

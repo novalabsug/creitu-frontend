@@ -125,7 +125,7 @@ export default function Home() {
 
         {/* //section --------------------- */}
         <div className="flex py-8">
-          <div className="m-auto lg:w-4/5 sm:w-[90%] w-[95%]">
+          <div className="m-auto lg:w-4/5 w-[90%]">
             <div className="flex py-8 lg:flex-row flex-col">
               <div className="lg:w-2/4 w-[90%]">
                 <div className="relative flex h-full justify-center items-center lg:pr-12 px-0 lg:py-0 py-4">
@@ -139,7 +139,7 @@ export default function Home() {
                     </p>
 
                     <div className="py-4">
-                      <h3 className="text-center text-white font-light my-3">
+                      <h3 className="text-center text-white font-light my-3 lg:text-base text-sm">
                         Lorem, ipsum dolor sit amet consectetur adipisicing
                         elit. Ad eum illum cupiditate hic magnam quas deleniti
                         distinctio aperiam dolores quam tempora non voluptas
@@ -147,7 +147,7 @@ export default function Home() {
                         voluptatum. Cumque deleniti dolorum quibusdam.
                       </h3>
 
-                      <h3 className="text-center text-white font-light my-3">
+                      <h3 className="text-center text-white font-light my-3 lg:text-base text-sm">
                         Voluptas facilis commodi cum ullam repudiandae impedit,
                         aliquid voluptatum. Cumque deleniti dolorum quibusdam.
                       </h3>
