@@ -44,6 +44,7 @@ const PersonalInfo = ({ switchTab, states, setStates, handleDataFetch }) => {
                 <ImagePlus size={30} className="text-white" />
               </div>
             </Label>
+
             <Input
               type="file"
               id="image"

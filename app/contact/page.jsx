@@ -105,24 +105,27 @@ const About = () => {
                   </div>
 
                   <div className="py-6">
-                    <div className="flex gap-6">
+                    <div className="flex gap-4">
                       <div>
                         <Twitter
-                          size={35}
+                          size={22}
+                          strokeWidth={2}
                           className="cursor-pointer text-white hover:text-[#0c7199]"
                         />
                       </div>
 
                       <div>
                         <Instagram
-                          size={35}
+                          size={22}
+                          strokeWidth={2}
                           className="cursor-pointer text-white hover:text-[#0c7199]"
                         />
                       </div>
 
                       <div>
                         <Twitch
-                          size={35}
+                          size={22}
+                          strokeWidth={2}
                           className="cursor-pointer text-white hover:text-[#0c7199]"
                         />
                       </div>
