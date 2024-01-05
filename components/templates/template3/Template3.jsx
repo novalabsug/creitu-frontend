@@ -132,6 +132,8 @@ const Template3 = () => {
             {activeTab === "about" && <AboutTab />}
             {activeTab === "contact" && <ContactTab />}
 
+            <div className="h-8  w-full z-50"></div>
+
             <div className="py-3 absolute bottom-0 right-0 left-0 bg-black z-50">
               <p className="text-center text-white">
                 {new Date().getFullYear()} &copy; copyright.{" "}

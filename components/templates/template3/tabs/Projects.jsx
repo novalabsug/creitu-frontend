@@ -13,7 +13,7 @@ const ProjectsTab = () => {
           <div className="h-[1.2px] w-[100px] bg-green-500"></div>
         </div>
 
-        <div className="lg:py-4 py-8 lg:max-h-[450px] h-full overflow-auto">
+        <div className="lg:py-4 py-8 lg:max-h-[400px] h-full overflow-auto">
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
             <Project
               title={"A random project"}

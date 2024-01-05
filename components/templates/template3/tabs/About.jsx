@@ -27,7 +27,7 @@ const AboutTab = () => {
   ];
 
   return (
-    <div className="lg:p-8 py-4 px-2 h-full overflow-auto">
+    <div className="lg:p-8 py-4 px-2 xl:max-h-[400px] lg:max-h-[500px] h-full overflow-auto">
       <div className="py-3">
         <p className="text-green-500 font-light lg:text-left text-center">
           Who am I?
